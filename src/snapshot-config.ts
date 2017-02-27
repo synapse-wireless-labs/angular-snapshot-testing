@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { assign } from 'lodash';
 
 @Injectable()
 export abstract class SnapshotConfig {
@@ -15,6 +16,6 @@ export abstract class SnapshotConfig {
   }
 
   static withDefaults(config: SnapshotConfig): SnapshotConfig {
-    return Object.assign(SnapshotConfig.defaults(), config);
+    return assign(SnapshotConfig.defaults(), config);
   }
 }

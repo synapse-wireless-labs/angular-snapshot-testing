@@ -12,6 +12,7 @@ export default {
     'fs',
     'lodash',
     'js-yaml',
+    'mkdirp',
   ],
   globals: {
     '@angular/core': 'ng.core',
