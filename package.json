@@ -1,6 +1,6 @@
 {
   "name": "jasmine-angular-snapshot-testing",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0",
   "description": "Angular component snapshot testing for Jasmine",
   "main": "./bundles/jasmine-angular-snapshot-testing.umd.js",
   "module": "./index.js",
