@@ -7,6 +7,14 @@ import { initializeSnapshots, getRunner, getConfig } from './src/env';
 
 jasmine.getEnv().beforeAll(installSnapshotMatcher);
 
+declare global {
+  namespace jasmine {
+    interface Matchers {
+      toMatchSnapshot(): void;
+    }
+  }
+}
+
 export { initializeSnapshots };
 
 export function load(module: NodeModule) {
