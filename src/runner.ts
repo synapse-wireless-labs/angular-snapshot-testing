@@ -97,9 +97,11 @@ export class SnapshotRunner {
   }
 
   saveSnapshots() {
-    const snapshots = merge({}, this.loadedSnapshots, this.encounteredSnapshots);
-
-    this.fileHandler.save(this.activeFilePath, snapshots);
+    if (!this.config.failOnSnapshotDiscovery) {
+      const snapshots = merge({}, this.loadedSnapshots, this.encounteredSnapshots);
+  
+      this.fileHandler.save(this.activeFilePath, snapshots);
+    }
 
     this.activeFilePath = null;
   }
