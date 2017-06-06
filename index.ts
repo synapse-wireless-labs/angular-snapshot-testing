@@ -9,7 +9,7 @@ jasmine.getEnv().beforeAll(installSnapshotMatcher);
 
 declare global {
   namespace jasmine {
-    interface Matchers {
+    interface Matchers<T> {
       toMatchSnapshot(): void;
     }
   }
